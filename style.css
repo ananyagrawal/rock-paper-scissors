@@ -1,0 +1,37 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #373e98;
+}
+.wrapper{
+    background-color: #f16775;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 30px;
+    padding: 20px 20px 20px 20px;
+}
+.btn{
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+}
+.icon{
+    width: 160px;
+}
+.reset-icon{
+    width: 100px;
+}
+.title{
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+    margin: 0;
+}
