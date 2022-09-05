@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="btn-container">
+        <button class="btn" id="rock" onclick="start(value)" value="rock">
+          <img class="icon" src="images/rock-1.png" />
+          <p class="title">ROCK</p>
+        </button>
+        <button class="btn" id="paper" onclick="start(value)" value="paper">
+          <img class="icon" src="images/paper-1.png" />
+          <p class="title">PAPER</p>
+        </button>
+        <button class="btn" id="scissors" onclick="start(value)" value="scissors">
+          <img class="icon" src="images/scissors-1.png" />
+          <p class="title">SCISSORS</p>
+        </button>
+      </div>
+      <div class="resultContainer">
+        <div id="score"></div>
+        <div id="hands"></div>
+        <div id="result"></div>
+        <button class="btn" id="resetGameBtn">
+          <img class="reset-icon" src="images/reset-1.png" />
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
