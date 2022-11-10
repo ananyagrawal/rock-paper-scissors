@@ -2,8 +2,9 @@ const playerScore=document.getElementById('score')
 
 function start(value){
     playerScore.innerText = `You choose: ${value}`
-    const random =  Math.random(2)
-    playerScore.innerText = `Computer choose: ${random}`
+    const random =  Math.floor(Math.random()*3)
+    const choice = getComputerChoice()
+    playerScore.innerText = `Computer choose: ${choice}`
 }
 // ** getComputerChoice randomly selects between `rock` `paper` `scissors` and returns that string **
 // getComputerChoice() 👉 'Rock'
@@ -54,7 +55,7 @@ function getResult(playerChoice, computerChoice) {
   // return score
   
 }
-
+console.log(getResult('Rock', 'Rock'))
 // ** showResult updates the DOM to `You Win!` or `You Lose!` or `It's a Draw!` based on the score. Also shows Player Choice vs. Computer Choice**
 function showResult(score, playerChoice, computerChoice) {
   // Hint: on a score of -1
