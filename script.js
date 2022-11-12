@@ -33,37 +33,29 @@ function getResult(playerChoice, computerChoice) {
     if(computerChoice=='Paper')
     return 1
   }
-
-  // All situations where human draws, set `score` to 0
-  
-
-  // All situations where human wins, set `score` to 1
-  // make sure to use else ifs here
-  
-
-  // Otherwise human loses (aka set score to -1)
-  
-
-  // return score
-  
 }
 
 // ** showResult updates the DOM to `You Win!` or `You Lose!` or `It's a Draw!` based on the score. Also shows Player Choice vs. Computer Choice**
+let playerScore=0
+let computerScore=0
 function showResult(score, playerChoice, computerChoice) {
-  // Hint: on a score of -1
-  // You should do result.innerText = 'You Lose!'
-  // Don't forget to grab the div with the 'result' id!
+  
   const handsDiv = document.getElementById('hands')
   const resultDiv = document.getElementById('result')
   const scoreDiv = document.getElementById('score')
-  handsDiv.innerText=playerChoice+' '+computerChoice
+  let result = ''
   if(score == 0){
-    resultDiv.innerText = 'You Drew!'
+    result = 'You Drew!'
   } else if(score == 1){
-    resultDiv.innerText = 'You Won!'
+    result = 'You Won!'
+    playerScore++
   } else{
-    resultDiv.innerText = 'You Lost!'
+    result = 'You Lost!'
+    computerScore++
   }
+  scoreDiv.innerText = `Player Score: ${playerScore} Computer Score: ${computerScore}`
+  handsDiv.innerText=`Player: ${playerChoice} vs Computer: ${computerChoice}`
+  resultDiv.innerText = `${result}`
 }
 
 // ** Calculate who won and show it on the screen **
@@ -89,13 +81,21 @@ function playGame() {
   })
  
 
-  // Add a click listener to the end game button that runs the endGame() function on click
-  
+  // click listener to the end game button that runs the endGame() function on click
+  const endGameButton = document.getElementById('resetGameBtn')
+  endGameButton.onclick = () => endGame()
 }
 
 // ** endGame function clears all the text on the DOM **
 function endGame() {
-  
+  const handsDiv = document.getElementById('hands')
+  const resultDiv = document.getElementById('result')
+  const scoreDiv = document.getElementById('score')
+  handsDiv.innerText = ''
+  resultDiv.innerText = ''
+  playerScore=0
+  computerScore=0
+  scoreDiv.innerText = `Player Score: 0 Computer Score: 0`
 }
 
 playGame()
