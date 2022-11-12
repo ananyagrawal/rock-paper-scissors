@@ -36,3 +36,20 @@ body{
     font-size: 20px;
     margin: 0;
 }
+#score{
+    font-size: 20px;
+    color: white;
+}
+#hands{
+    font-size: 20px;
+    color: #373e98;
+}
+#result{
+    font-size: 26px;
+    color: white;
+    font-weight: bold;
+}
+#score, #hands, #result{
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
